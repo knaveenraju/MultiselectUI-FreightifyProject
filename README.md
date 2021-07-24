@@ -65,7 +65,7 @@ Add the below code to implement the Multi-Select Dropdown
         {lable :'Zimbabwe',value:'ZWE', isChecked :false , img:"https://www.countryflags.com/wp-content/uploads/zimbabwe-flag-png-large.png" },
       ]
     }
-     ```
+ ```
 
 ### app.component.html
  ```
