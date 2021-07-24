@@ -70,7 +70,6 @@ Add the below code to implement the Multi-Select Dropdown
  [list]="countryDataList"
  [filter]="filter" filterBy="lable,value"
  (onChange)="onChange($event)" 
- >
-</lib-Multiselect-Lib>
+ ></lib-Multiselect-Lib>
 
 
