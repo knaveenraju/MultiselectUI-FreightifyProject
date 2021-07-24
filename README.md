@@ -29,7 +29,7 @@ filterBy - When filtering is enabled, filterBy option will decide which field or
  ```
 ## Installation
  ```
-npm i multiselect-ui-freightify-project
+npm i multiselect-lib
  ```
 ## Code
  ```
