@@ -7,6 +7,8 @@
   * app.module.ts
   * app.component.ts
   * app.component.html
+* Demo
+
   
 
 ## Project Title
@@ -82,5 +84,7 @@ Add the below code to implement the Multi-Select Dropdown
  ></lib-Multiselect-Lib>
 
   ```
+## Demo
+
 
 
