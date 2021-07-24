@@ -10,9 +10,11 @@
   
 
 ## Project Title
+ ```
 Multi-Select Dropdown 
-
+ ```
 ## Requirements
+ ```
 Develop a reusable multiselect ui component using Angular 8 or above
 
 Expected features in multi-select component: 
@@ -22,16 +24,21 @@ Expected features in multi-select component:
 
 filter   - When this option is set to true, then the filter input would be visible in the dropdown.
 filterBy - When filtering is enabled, filterBy option will decide which field or fields to lookup while the user is searching.
-
+ ```
 ## Installation
+ ```
 npm i multiselect-ui-freightify-project
-
+ ```
 ## Code
+ ```
 Add the below code to implement the Multi-Select Dropdown
-
+ ```
 ### app.module.ts
+```
+```
 
 ### app.component.ts
+ ```
  title="MultiselectUI-FreightifyProject";
   countryDataList:any;
   filter="true";
@@ -58,8 +65,10 @@ Add the below code to implement the Multi-Select Dropdown
         {lable :'Zimbabwe',value:'ZWE', isChecked :false , img:"https://www.countryflags.com/wp-content/uploads/zimbabwe-flag-png-large.png" },
       ]
     }
+     ```
 
 ### app.component.html
+ ```
  <span ><b>Do you want to filter feature to MultiSelect Dropdown</b></span>
  <input type="radio" id="true" name="filter" value="true" [(ngModel)]="filter" >
    <label for="true">YES</label>
@@ -71,5 +80,7 @@ Add the below code to implement the Multi-Select Dropdown
  [filter]="filter" filterBy="lable,value"
  (onChange)="onChange($event)" 
  ></lib-Multiselect-Lib>
+
+  ```
 
 
