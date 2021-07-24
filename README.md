@@ -37,6 +37,8 @@ Add the below code to implement the Multi-Select Dropdown
  ```
 ### app.module.ts
 ```
+import { MultiselectLibModule } from 'multiselect-lib';
+import { FormsModule } from '@angular/forms';
 ```
 
 ### app.component.ts
@@ -71,7 +73,7 @@ Add the below code to implement the Multi-Select Dropdown
 
 ### app.component.html
  ```
- <span ><b>Do you want to filter feature to MultiSelect Dropdown</b></span>
+ <span ><b>Do you want to add filter feature to MultiSelect Dropdown</b></span>
  <input type="radio" id="true" name="filter" value="true" [(ngModel)]="filter" >
    <label for="true">YES</label>
    <input type="radio" id="false" name="filter" value="false" [(ngModel)]="filter" >
@@ -81,10 +83,15 @@ Add the below code to implement the Multi-Select Dropdown
  [list]="countryDataList"
  [filter]="filter" filterBy="lable,value"
  (onChange)="onChange($event)" 
- ></lib-Multiselect-Lib>
+ >
+</lib-Multiselect-Lib>
+
+
 
   ```
 ## Demo
+Demo of Multi-Select Dropdown,
+
 ![demo](https://user-images.githubusercontent.com/72270858/126870169-e2d361ae-816c-4c6e-ae59-80c5161535da.gif)
 
 
