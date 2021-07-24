@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -97,6 +100,37 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "multiselect-lib": {
+      "projectType": "library",
+      "root": "projects/multiselect-lib",
+      "sourceRoot": "projects/multiselect-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/multiselect-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/multiselect-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/multiselect-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/multiselect-lib/src/test.ts",
+            "tsConfig": "projects/multiselect-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/multiselect-lib/karma.conf.js"
           }
         }
       }

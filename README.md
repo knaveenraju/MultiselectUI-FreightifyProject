@@ -1,27 +1,76 @@
-# MultiselectUIFreightifyProject
+# Table of contents
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+* Project Title
+* Requirements
+* Installation
+* Code
+  * app.module.ts
+  * app.component.ts
+  * app.component.html
+  
 
-## Development server
+## Project Title
+Multi-Select Dropdown 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Requirements
+Develop a reusable multiselect ui component using Angular 8 or above
 
-## Code scaffolding
+Expected features in multi-select component: 
+1. Searchable 
+2. Scrollable 
+3. Clickable 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+filter   - When this option is set to true, then the filter input would be visible in the dropdown.
+filterBy - When filtering is enabled, filterBy option will decide which field or fields to lookup while the user is searching.
 
-## Build
+## Installation
+npm i multiselect-ui-freightify-project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Code
+Add the below code to implement the Multi-Select Dropdown
 
-## Running unit tests
+### app.module.ts
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### app.component.ts
+ title="MultiselectUI-FreightifyProject";
+  countryDataList:any;
+  filter="true";
+  
+  onChange(item:any[]){
+    console.log(item);
+  }
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ngOnInit(){
+      this.countryDataList = 
+      [
+        {lable:'Afghanistan',value:'AFG', isChecked :false, img:"https://www.countryflags.com/wp-content/uploads/flag-jpg-xl-1-2048x1365.jpg" },
+        {lable :'Australia',value:'AUS', isChecked :false , img:"https://www.countryflags.com/wp-content/uploads/flag-jpg-xl-9-2048x1024.jpg" },
+        {lable :'Bangladesh',value:'BGD', isChecked :false , img:"https://images.all-free-download.com/images/graphiclarge/bangladesh_132894.jpg" },
+        {lable:'Canada',value:'CAN', isChecked :false , img:"https://images.all-free-download.com/images/graphiclarge/canada_logo_28270.jpg" },
+        {lable:'China',value:'CHN', isChecked :false , img:"https://cdn.countryflags.com/thumbs/china/flag-800.png" },
+        {lable :'Germany',value:'DEU', isChecked :false , img:"https://images.all-free-download.com/images/graphiclarge/schwarz_rot_gold_55219.jpg" },
+        {lable:'India',value:'IND', isChecked :false , img:"https://www.countryflags.com/wp-content/uploads/india-flag-png-large.png" },
+        {lable :'Kenya',value:'KEN', isChecked :false , img:"https://images.all-free-download.com/images/graphiclarge/kenya_clip_art_14285.jpg" },
+        {lable :'Maldives',value:'MDV', isChecked :false , img:"https://www.countryflags.com/wp-content/uploads/maldives-flag-png-large.png" },
+        {lable :'Pakistan',value:'PAK', isChecked :false , img:"https://cdn.countryflags.com/thumbs/pakistan/flag-800.png" },
+        {lable :'South Africa',value:'ZAF', isChecked :false , img:"https://cdn.countryflags.com/thumbs/south-africa/flag-800.png" },
+        {lable :'Zimbabwe',value:'ZWE', isChecked :false , img:"https://www.countryflags.com/wp-content/uploads/zimbabwe-flag-png-large.png" },
+      ]
+    }
 
-## Further help
+### app.component.html
+ <span ><b>Do you want to filter feature to MultiSelect Dropdown</b></span>
+ <input type="radio" id="true" name="filter" value="true" [(ngModel)]="filter" >
+   <label for="true">YES</label>
+   <input type="radio" id="false" name="filter" value="false" [(ngModel)]="filter" >
+   <label for="false">NO</label><br>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<lib-Multiselect-Lib
+ [list]="countryDataList"
+ [filter]="filter" filterBy="lable,value"
+ (onChange)="onChange($event)" 
+ >
+</lib-Multiselect-Lib>
+
+

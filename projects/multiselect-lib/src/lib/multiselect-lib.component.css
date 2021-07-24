@@ -1,0 +1,53 @@
+/* CSS for Main dropdown box */
+.maindropdownfield {
+  min-width: 288px;
+  padding: 9px 6px 6px 6px;
+  background-color: white;
+  border: 1px solid black;
+}
+/* Close button CSS*/
+.button{
+  padding: 12px 15px 10px 14px;
+         background-color: white; 
+}
+
+/*Search bar CSS*/
+.searchInput {
+  border: 1px solid black;
+  font-size: 16px;
+  width: 210px;
+  padding: 10px 30px 10px 20px;
+  
+  }
+  /*Search bar foucs after clicking it*/
+  .searchInput:focus {outline: 1px solid grey}
+  
+
+/* CSS for Dropbox view  */
+.dropdownBoxView {
+
+width: 304px;
+background-color:white;
+min-width: 300px;
+border: 1px solid #ddd;
+
+}
+
+ /*CSS for height and scroll to country dropdown*/
+ .dropdownBox
+ {
+   height:250px;
+   overflow-x:scroll;
+ }
+
+.dropdown-checkbox {
+
+padding: 12px 16px;
+display: block;
+}
+
+/* For changing the colour of the country list on hover */
+ .dropdown-checkbox:hover {background-color:rgb(240, 239, 239)}
+
+
+  

@@ -1,0 +1,25 @@
+<div>
+    <h3>Multi select dropdown</h3>
+    <div >
+ 
+      <input type="text" (click)="viewdropDown()" class="maindropdownfield" value="{{selectedCountries.join(', ')}}">
+      <div *ngIf="viewDropDown">
+        <div class="dropdownBoxView">
+       
+        <input type="text" placeholder="Search Country Details... "  class="searchInput"   (keyup)="search_list(query.value)" #query>
+         <button (click)="viewdropDown()" class ="button">X</button>
+   
+       
+        <div class="dropdownBox">
+     
+      <label 
+        class="dropdown-checkbox" *ngFor="let a of filteredCountryList">
+       <input type="checkbox"  (change)="getSelectedValue(a.ischecked,a.lable)" [(ngModel)]="a.ischecked">  
+            <span>  <img src={{a.img}} style="width:20px"> {{a.lable}}</span> 
+            </label>
+            </div>
+    </div>
+  </div>
+    </div>
+  </div>
+   
