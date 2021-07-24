@@ -85,6 +85,7 @@ Add the below code to implement the Multi-Select Dropdown
 
   ```
 ## Demo
+![demo](https://user-images.githubusercontent.com/72270858/126870169-e2d361ae-816c-4c6e-ae59-80c5161535da.gif)
 
 
 
